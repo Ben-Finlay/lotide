@@ -11,7 +11,7 @@ const assertEqual = function(actual, expected) {
 
 
 const eqArrays = function(arr1, arr2) {
-  if (arr1.length === arr2.length && arr1.every((value, index) => value === arr2[index])) {
+  if (arr1.length === arr2.length && arr1.every((index, value) => index === arr2[value])) {
     return true;
     
   }
