@@ -20,6 +20,4 @@ const middle = function(array) {
 
 module.exports = middle;
 
-console.log(middle(['a', 'b', 'c']))
-
 

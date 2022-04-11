@@ -3,51 +3,8 @@ const without = function(source, itemsToRemove) {
   
   outputArray = outputArray.filter(value => !itemsToRemove.includes(value));
   
-  //console.log(outputArray)
-  
   return outputArray;
   
 };
-  
-const assertArraysEqual = function(arr1, arr2) {
 
-  let output = "";
-  
-  if (eqArrays(arr1, arr2)) {
-    output = `🟢 Assertion Passed: ${arr1} === ${arr2}`;
-      
-  } else {
-    output = `🔴 Assertion Failed: ${arr1} !== ${arr2}`;
-      
-  }
-  //console.log(output)
-  return output;
-    
-};
-  
-const eqArrays = function(arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
-  
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-  
-  return true;
-};
-
-
-
-// Test Code
-
-
-const words = ["hello", "world", "lighthouse"];
-without(words, ["lighthouse"]); // no need to capture return value for this test case
-// Make sure the original array was not altered by the without function
-assertArraysEqual(words, ["hello", "world", "lighthouse"]);
-
-const test = [1, 2, 4, 8, 16];
-without(test, [2, 4, 6]);
+module.exports = without;
